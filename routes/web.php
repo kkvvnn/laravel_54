@@ -14,3 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/user/{id?}', function($id = 1) {
+    return 'User ' . $id;
+})->name('user');
+
+Route::get('/post/{post}/comment/{comment}', function($postId, $commentId) {
+    return 'Post: ' . $postId . '<br>' . 'Comment: ' . $commentId;
+});
+
+
+Route::get('api/users/{user}', function (App\User $user) {
+    return $user->email;
+});
