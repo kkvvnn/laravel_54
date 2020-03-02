@@ -27,3 +27,11 @@ Route::get('/post/{post}/comment/{comment}', function($postId, $commentId) {
 Route::get('api/users/{user}', function (App\User $user) {
     return $user->email;
 });
+
+Route::get('/age/{age?}', function($age = 30) {
+    return 'Ваш возраст: ' . $age;
+})->middleware('checkage');
+
+Route::get('not18', function() {
+    return '<h1>Доступ закрыт. Вам нет 18-ти</h1>';
+})->name('not18');
