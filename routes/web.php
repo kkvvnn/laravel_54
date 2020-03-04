@@ -55,3 +55,6 @@ Route::get('/back', function() {
     return back();
 //    return redirect()->route('user', [$user]);
 });
+
+Route::get('/post/create', 'PostController@create');
+Route::post('/post', 'PostController@store');
