@@ -80,6 +80,7 @@
             <div class="content">
                 <div class="title m-b-md">
                     Laravel_54
+                    <p>{{ $count }}</p>
                 </div>
 
                 <div class="links">
