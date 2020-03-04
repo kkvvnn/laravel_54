@@ -44,3 +44,14 @@ Route::get('input/result', 'TestInputController');
 Route::get('resp_eloquent', function(\App\User $user) {
     return $user;
 });
+
+Route::get('/response', function() {
+    return response('Hello Response', 200)
+        ->header('Content-Type', 'text/plain')
+        ->cookie('name2', 'value');
+});
+
+Route::get('/back', function() {
+    return back();
+//    return redirect()->route('user', [$user]);
+});
