@@ -88,7 +88,8 @@
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
-                    <a href="{{route('user', ['id' => 556])}}">User</a>
+                    <a href="{{route('user', ['id' => 1])}}">User</a>
+                    <a href="{{route('users')}}">Users</a>
                 </div>
             </div>
         </div>
